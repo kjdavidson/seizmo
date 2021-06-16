@@ -37,9 +37,8 @@ cd ..
 # get gshhg
 mkdir -p gshhg
 cd gshhg
-wget ftp://ftp.soest.hawaii.edu/gshhg/gshhg-bin-2.2.4.zip
-unzip gshhg-bin-2.2.4.zip
-mv gshhg-bin-2.2.4.zip ..
+wget ftp://ftp.soest.hawaii.edu/gmt/gshhg-gmt-2.3.7.tar.gz
+tar xvfz gshhg-gmt-2.3.7.tar.gz
 cd ..
 
 # get extras
@@ -54,7 +53,7 @@ unzip seizmo_mapping_features.zip
 mkdir -p export_fig
 cd export_fig
 wget https://github.com/ojwoodford/export_fig/archive/master.zip
-mv master export_fig.zip
+mv master.zip export_fig.zip
 unzip export_fig.zip
 mv export_fig.zip ..
 cd ..
