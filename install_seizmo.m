@@ -615,7 +615,7 @@ function [words]=getwords(str,delimiter,collapse)
 %        Sep. 16, 2009 - add delimiter option
 %        Nov. 20, 2009 - make multi-delimiter collapse optional
 %        July 30, 2010 - nargchk fix
-%        Jan.  3, 2011 - use isstring
+%        Jan.  3, 2011 - use is_string
 %        Nov.  1, 2011 - doc update
 %
 %     Written by Garrett Euler (ggeuler at wustl dot edu)
@@ -627,7 +627,7 @@ function [words]=getwords(str,delimiter,collapse)
 error(nargchk(1,3,nargin));
 
 % check str
-if(~isstring(str))
+if(~is_string(str))
     error('seizmo:getwords:badInput','STR must be a char array!');
 end
 
@@ -670,10 +670,10 @@ for i=1:nw; words{i}=str(s(i):e(i)); end
 
 end
 
-function [lgc]=isstring(str)
+function [lgc]=is_string(str)
 %ISSTRING    True for a string (row vector) of characters
 %
-%    Usage:    lgc=isstring(str)
+%    Usage:    lgc=is_string(str)
 %
 %    Description:
 %     LGC=ISSTRING(STR) returns TRUE if STR is a string (ie row vector) of
@@ -683,7 +683,7 @@ function [lgc]=isstring(str)
 %
 %    Examples:
 %     % A 2x2 character array will return FALSE:
-%     isstring(repmat('a',2,2))
+%     is_string(repmat('a',2,2))
 %
 %    See also: ISCHAR
 
